@@ -8,8 +8,9 @@
 // @match        *://www.youtube.com/shorts/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        none
+// @license      MIT
 // ==/UserScript==
-
+ 
 (function() {
     'use strict';
     return window.location.replace(`https://youtube.com/watch?v=${location.href.split("/shorts/")[1]}`);
