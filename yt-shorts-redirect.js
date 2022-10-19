@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Shorts Redirector
 // @namespace    https://github.com/charlie-moomoo
-// @version      0.1
+// @version      0.2
 // @description  Auto redirects /shorts link to /watch?v= link on YouTube.
 // @author       CharlieMoomoo
 // @match        *://youtube.com/shorts/*
@@ -9,6 +9,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        none
 // @license      MIT
+// @run-at       document-start
 // ==/UserScript==
  
 (function() {
