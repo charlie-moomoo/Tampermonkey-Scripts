@@ -8,6 +8,7 @@
 // @match        https://www.minecraft.net/*
 // @icon         https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/apple-icon-180x180.png
 // @grant        none
+// @license      MIT
 // ==/UserScript==
 
 (function() {
