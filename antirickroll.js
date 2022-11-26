@@ -1,25 +1,12 @@
 // ==UserScript==
 // @name         AntiRickroll
-// @namespace    *://github.com/charlie-moomoo
-// @version      0.1
+// @namespace    https://github.com/charlie-moomoo
+// @version      0.2
 // @description  Removes the page when you're trying to access a Rickroll page.
 // @author       CharlieMoomoo
 // @match        *://blogs.mtdv.me/*
 // @match        *://r.mtdv.me/*
-// @match        *://*.youtube.com/watch?v=dQw4w9WgXcQ*
-// @match        *://*.youtube.com/watch?v=AACOcpA8i-U*
-// @match        *://*.youtube.com/watch?v=j8PxqgliIno*
-// @match        *://*.youtube.com/watch?v=bIwVIx5pp88*
-// @match        *://*.youtube.com/watch?v=HnfkEVtetuE*
-// @match        *://*.youtube.com/watch?v=QB7ACr7pUuE*
-// @match        *://*.youtube.com/watch?v=mrThFRR3n8A*
-// @match        *://*.youtube.com/watch?v=MCjlo7PtXMQ*
-// @match        *://*.youtube.com/watch?v=a6pbjksYUHY*
-// @match        *://*.youtube.com/watch?v=ll-mQPDCn-U*
-// @match        *://*.youtube.com/watch?v=iik25wqIuFo*
-// @match        *://*.youtube.com/watch?v=dRV6NaciZVk*
-// @match        *://*.youtube.com/watch?v=LWErcuHm_C4*
-// @match        *://*.youtube.com/watch?v=j7gKwxRe7MQ*
+// @match        *://*.youtube.com/*
 // @icon         https://static.wikia.nocookie.net/youtube/images/c/ce/RickRollButWithADifferentLink.jpg/revision/latest?cb=20201023192005
 // @grant        window.onurlchange
 // @license      MIT
@@ -28,7 +15,15 @@
 
 (function() {
     'use strict';
-     document.write('Rickroll detected!<br><br>Rickroll removal powered by AntiRickroll');
-     document.title = 'Rickroll detected';
-     window.stop();
+    const run = ()=>{
+        if (location.host.match(/.*\.youtube\.com/gm)){
+            const rickrolls = ['dQw4w9WgXcQ','AACOcpA8i-U','j8PxqgliIno','bIwVIx5pp88','HnfkEVtetuE','QB7ACr7pUuE','mrThFRR3n8A','MCjlo7PtXMQ','a6pbjksYUHY','ll-mQPDCn-U','iik25wqIuFo','dRV6NaciZVk','LWErcuHm_C4','j7gKwxRe7MQ'];
+            if (!rickrolls.includes(location.href.split('?v=')[1])) return;
+        }
+        document.write('Rickroll detected!<br><br>Rickroll removal powered by AntiRickroll');
+        document.title = 'Rickroll detected';
+        window.stop();
+    }
+    run()
+    window.addEventListener("urlchange",run);
 })();
