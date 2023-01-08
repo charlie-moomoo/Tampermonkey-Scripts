@@ -2,7 +2,7 @@
 // @name         Adfly Skipper
 // @namespace    https://github.com/charlie-moomoo
 // @version      0.1
-// @description  Think Adfly is annoying? Same! This script does almost all the work for you, letting you skip Adfly. (except Click here to continue)
+// @description  This script does almost all the work for you, letting you skip Adfly. (except Click here to continue)
 // @author       CharlieMoomoo
 // @match        *://*/*
 // @icon         https://play-lh.googleusercontent.com/Tie7kj_sUJacI3b6d618rKbJJx-FjEduZyuWK5hBLDeHI-Qme1hBYNOE0gTM3CATD6Am
