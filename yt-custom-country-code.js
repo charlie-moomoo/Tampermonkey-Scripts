@@ -13,7 +13,6 @@
 (function() {
     'use strict';
     const countrycode = "sus" //Replace it with anything you want
-    console.log("hi")
     const replace = ()=>{
         document.querySelectorAll('#country-code').forEach((element)=>{
             element.innerHTML = countrycode
